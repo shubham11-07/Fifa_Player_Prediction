@@ -89,7 +89,8 @@ model = model.select(model.features, model.label)
 
 def evaluateResults(ground_truth, pred, model):
     print(model + " Model Results: ")
-    print(classification_report(ground_truth, pred))
+    print(classification_report(ground_truth, pred,
+          target_names=["Defender", "Striker", "Midfielder"]))
 
 
 def predFunctions(train, test, model):
